@@ -1,0 +1,214 @@
+@font-face {
+    font-family: myBoldFont;
+    src: url("../FNT/Gotham-Bold.woff2") format('woff2');
+}
+
+@keyframes textfadein {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/*#region Body, Navbar & Footer*/
+body {
+    background: #000;
+    font-family: myBoldFont, serif;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 1vh;
+    padding: 5px;
+    position: fixed;
+    z-index: 2;
+
+    background: rgba(0,0,0,.8);
+    border-radius: 25px;
+}
+
+nav ul {
+    font-size: 24px;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    padding: 22px 22px;
+    margin: 3px;
+
+    color: #FFF4F2;
+    text-decoration: none;
+    transition: 400ms ease-in;
+}
+
+nav li a:hover {
+    border-radius: 25px;
+
+    background: #c42133;
+    transition: 400ms ease-in-out;
+}
+
+.navbarLogo {
+    position: absolute;
+    top: 1vh;
+    left: 2vh;
+    max-height: 10vh;
+    max-width: 10vh;
+
+    border-radius: 15px;
+}
+/*#endregion Body, Navbar & Footer*/
+
+/*#region Div1 | Welcome Text + BG IMG*/
+.firstDiv {
+    display: flex;
+    justify-content: center;
+
+    color: #FFF4F2;
+    text-align: center;
+}
+
+.firstDiv img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.firstDiv h1 {
+    position: absolute;
+    top: 30%;
+
+    font-size: 40px;
+}
+
+.firstDiv h2 {
+    position: absolute;
+    top: 40%;
+    width: 40%;
+
+    font-size: 25px;
+}
+
+.welcomeText {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 27%;
+    width: 70%;
+
+    animation: textfadein 1s ease-in-out 0s 1 normal forwards;
+}
+
+.welcomeText h2 {
+    margin-top: 10%;
+}
+
+.socialsFront {
+    margin: 1%;
+    position: absolute;
+    bottom: 0;
+    right: 1vh;
+}
+
+.socialsFront img {
+    max-height: 7vh;
+    max-width: 7vh;
+    border-radius: 50%;
+}
+
+.DarkOpacity {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+/*#endregion Div1 | Welcome Text + BG IMG*/
+
+/*#region Div2 | Maps + Location*/
+.secondDiv {
+    height: 100vh;
+    background: #bd827d;
+}
+
+.mapsImage img {
+    position: absolute;
+    object-fit: cover;
+    height: 100vh;
+    width: 60%;
+    right: 0;
+    z-index: 1;
+    clip-path: polygon(55% 54%, 61% 35%, 53% 18%, 65% 0, 100% 0, 100% 100%, 13% 100%, 34% 83%, 56% 74%);
+}
+
+.mapsText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-top: 10%;
+    width: 40%;  
+
+    color: #FFF4F2;
+}
+
+.mapsText a {
+    display: block;
+    text-align: center;
+    padding: 22px 22px;
+    width: 40%;
+    height: 20%;
+    font-size: 24px;
+
+    color: #c42133;
+    outline: 2px solid #c42133;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 400ms ease-in;
+}
+
+.mapsText a:hover {
+    background: #c42133;
+    color: #fbeaff;
+    transform: translateX(10px);
+    transition: 400ms ease-in;
+}
+
+.line {
+    height: 3px;
+    width: 20vw;
+    background: #c42133;
+    border-radius: 25px;
+    margin-top: 3vh;
+    margin-left: 1px;
+    padding-top: 5px;
+}
+/*#endregion Div2 | Maps + Location */
+
+/*#region Div3 | Popular Dishes */
+.thirdDiv {
+    height: 100vh;
+    background: #c42133;
+}
+/*#endregion Div3 | Popular Dishes */
